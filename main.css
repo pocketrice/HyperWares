@@ -16,6 +16,16 @@
 	src: url(MarcellusSC.ttf);
 }
 
+@font-face {
+	font-family: "Cascadia Code";
+	src: url(CascadiaCode.ttf);
+}
+
+@font-face {
+	font-family: "Cascadia Code Italic";
+	src: url(CascadiaCodeItalic.ttf);
+}
+
 
 
 header h1 {
@@ -44,10 +54,24 @@ html, body {
 }
 
 body {
-	background-image: linear-gradient(to bottom right, #96D4C3, #85B095);
+	background-color: #D2FEE0;
 }
 
 #filler {
 	height: 300px;
 }
 
+
+footer {
+	margin: 0;
+	padding: 20px 30px 10px 30px;
+	background-color: #191916;
+	font-family: "B612 Mono";
+	color: #B9B9A8;
+	font-size: 12px;
+}
+
+.disclaimer {
+	color: #C9A793;
+	font-style: italic;
+}
