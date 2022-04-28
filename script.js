@@ -57,20 +57,8 @@ window.addEventListener('load', function() {
 	ctx.fill();
 	ctx.closePath();
 
-	ctx.fillStyle = "#444FAD"; // Sets color
-	ctx.font = '30px "Cascadia Code Italic"'; // Sets font -- 5px is too small to read
-	ctx.fillText('h w', 70, 120); // Text
-
-/*
-	ctx.beginPath();
-	ctx.strokeStyle = "#6AA0AA"
-	ctx.arc(100, 100, 80, 0, Math.PI*2, true);
-	ctx.lineWidth = "10";
-	ctx.stroke();
-	ctx.closePath();
-
 	ctx.fillStyle = "#444FAD";
-	ctx.font = '30px "Albertus MT"';
-	ctx.fillText('H', 90, 90); // PLACEHOLDER VALUES
-	ctx.fillText('W', 110, 110);*/
+	ctx.font = '70px "Cascadia Code Italic"';
+	ctx.fillText('h', 120, 100);
+	ctx.fillText('w', 212.5, 150)
 })
