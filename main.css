@@ -41,7 +41,6 @@ header h1 {
 header p {
 text-align: center;
 font-family: "Albertus MT";
-font-style: italic;
 font-size: 16px;
 color: #848F8F;
 }
@@ -57,12 +56,12 @@ html, body {
 	overflow-x: hidden;
 }
 
-canvas {
-	filter: drop-shadow(3px 3px 15px #1B1A18);
+#logo {
+	filter: drop-shadow(3px 3px 15px #2E3939);
 	position: absolute;
 	top:  10px;
 	z-index: 10;
-	display: none; /* REMOVE TO EDIT LOGO */
+
 }
 
 img.backdrop {
@@ -90,6 +89,6 @@ footer {
 }
 
 .disclaimer {
-	color: #C9A793;
+	color: #B49584;
 	font-style: italic;
 }
