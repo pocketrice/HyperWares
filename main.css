@@ -32,7 +32,7 @@ header h1 {
 	text-align: center;
 	font-family: "Marcellus SC";
 	font-size: 30px;
-	text-shadow: 0.5px 0.5px 1px #3C3731;
+	text-shadow: 0.8px 0.8px 2px #3C3731;
 	margin-top: 10px;
 	font-weight: normal;
 	color: #D4E3E4;
@@ -61,7 +61,7 @@ html, body {
 	position: absolute;
 	top:  10px;
 	z-index: 10;
-
+	display: none;
 }
 
 img.backdrop {
@@ -92,3 +92,125 @@ footer {
 	color: #B49584;
 	font-style: italic;
 }
+
+h1 span {
+position: absolute;
+left: 41.5%;
+top: 43px;
+}
+
+#templogo {
+	position: absolute;
+	width: 75px;
+	image-rendering: pixelated;
+	left: 36.5%;
+	top: 13px;
+	filter: drop-shadow(0.5px 0.5px 3px #364642);
+}
+
+
+div.nav {
+font-family: Cascadia Code;
+font-size: 18px;
+
+color: #96A9A7;
+cursor: pointer;
+position: relative;
+top: -30px;
+}
+
+div.nav > * { /* OMEGA WIP!! Replace with flexbox or something */
+	position: absolute;
+	transition: color 0.7s;
+}
+
+div.nav > *:hover {
+color: #E0E5EC;
+}
+
+#essentials { 
+	left: 7%;
+}
+
+#markup {
+	left: 24%;
+}
+
+#sandbox {
+	left: 70%;
+}
+
+#checkout {
+	left: 85%;
+}
+
+
+
+#banner {
+	position: absolute;
+	left: 34.5%;
+	top: 0;
+	padding: 90px 170px 10px 160px;
+	background-image: linear-gradient(to bottom, #DBFFF833, #B2FFEF33);
+	border-radius: 0 0 15px 15px;
+	z-index: -100;
+}
+/*
+
+// Note:  way too many CSS bits to include all of them on HyperWares. Maybe do the most useful ones, then a hearty chunk of obscure ones;
+
+PRODUCT SELECTION: CSS
+
+======== Essentials ========
+margin * (including top, left, right...)
+padding *
+color 
+background *
+position
+transforms (width/height)
+ID/Class selectors (*, .)
+===========================
+
+
+======== Typography ========
+font-family
+font-size
+etc.
+
+@font-face
+** all text-related bits
+======================
+
+
+
+======== Object Manipulation ======
+transform
+float
+opacity
+overflow *
+clip-path
+filter
+clamp()
+================
+
+
+========== UX ===========
+cursor
+user-select
+z-index
+border *
+pointer-events
+...
+==================
+
+
+
+======== Selectors ========
+List selector (A, B)
+Adjacent sibling (A + B)
+General sibling (A ~ B)
+Child combinator (A > B)
+Descendant combinator (A B)
+Column combinator (A || B)
+Pseudo-classes/elements (:, ::)
+===================
