@@ -35,7 +35,7 @@ header h1 {
 	text-shadow: 0.8px 0.8px 4px #303c37;
 	margin-top: 10px;
 	font-weight: normal;
-	color: #96cdd4;
+	color: #99D6CD;
 }
 
 header p {
@@ -82,7 +82,7 @@ footer {
 	padding: 20px 30px 10px 30px;
 	background-color: #191916;
 	font-family: "B612 Mono";
-	color: #B9B9A8;
+	color: #8C7F7D;
 	font-size: 12px;
 	position: absolute;
 	bottom: -10px;
@@ -145,6 +145,15 @@ color: #E0E5EC;
 }
 
 
+#promo-panel {
+	position: absolute;
+	background-image: linear-gradient(to bottom, #FFFDDB18, #F9FFD813);
+	border-radius: 25px 20px 25px 20px;
+	z-index: -100;
+	left: 6.4%;
+	top: 30%;
+	padding: 50px 300px 300px 200px;
+}
 
 #banner {
 	position: absolute;
@@ -154,6 +163,47 @@ color: #E0E5EC;
 	background-image: linear-gradient(to bottom, #DBFFF833, #B2FFEF33);
 	border-radius: 0 0 15px 15px;
 	z-index: -100;
+}
+
+div#promo-panel + h2 {
+position: absolute;
+font-family: Cascadia Code;
+font-size: 30px;
+font-variant: small-caps;
+color: #DFF9FF;
+left: 50%;
+top: 28%;
+}
+
+#promo-text {
+	color: #A9B8C0;
+	font-family: Inconsolata;
+	font-size: 18px;
+	position: absolute;
+	top: 37%;
+	margin-left: 50%;
+	margin-right: 10%;
+}
+
+#promo-text > strong {
+	padding: 4px 8px;
+	border-radius: 7px;
+	background-image: linear-gradient(to bottom, #56CFD363, #79C8CC53);
+	color: #2A4750;
+	transition: color 0.75s;
+
+}
+
+#promo-text > strong:hover {
+	color:  #7AA9B0;
+}
+
+#promo-panel-text {
+	font-family: Inconsolata;
+	font-size: 13px;
+	margin-left: 100px;
+	margin-top: 140px;
+	color: #101315;
 }
 /*
 
