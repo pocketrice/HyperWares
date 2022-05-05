@@ -32,10 +32,10 @@ header h1 {
 	text-align: center;
 	font-family: "Marcellus SC";
 	font-size: 30px;
-	text-shadow: 0.8px 0.8px 2px #3C3731;
+	text-shadow: 0.8px 0.8px 4px #303c37;
 	margin-top: 10px;
 	font-weight: normal;
-	color: #D4E3E4;
+	color: #96cdd4;
 }
 
 header p {
@@ -101,7 +101,7 @@ top: 43px;
 
 #templogo {
 	position: absolute;
-	width: 75px;
+	width: 70px;
 	image-rendering: pixelated;
 	left: 36.5%;
 	top: 13px;
