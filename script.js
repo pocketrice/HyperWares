@@ -1,4 +1,12 @@
 window.addEventListener('load', function() {
+	Mousetrap.bind('4', function() {
+		alert("debug");
+	});
+
+	seamless.polyfill();
+
+
+
 	var cnv = document.getElementById("logo");
 	var ctx = cnv.getContext('2d');
 	/*

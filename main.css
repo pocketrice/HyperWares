@@ -147,7 +147,7 @@ color: #E0E5EC;
 
 #promo-panel {
 	position: absolute;
-	background-image: linear-gradient(to bottom, #FFFDDB18, #F9FFD813);
+	background-image: linear-gradient(to top left, #FFFDDB30, #F9FFD825);
 	border-radius: 25px 20px 25px 20px;
 	z-index: -100;
 	left: 6.4%;
@@ -202,9 +202,96 @@ top: 28%;
 	font-family: Inconsolata;
 	font-size: 13px;
 	margin-left: 100px;
-	margin-top: 140px;
-	color: #101315;
+	margin-top: 150px;
+	color: #121f21;
 }
+
+#promo-panel-text > * {
+		transition: color 0.9s;
+		user-select: none;
+}
+
+/* TODO: use some JS magic to condense this all like in InternetTimeline */
+/*
+.promo1:hover { 
+color: #558b4c;
+}
+
+.promo2:hover ~ .promo2Z, .promo2:hover {
+	color: #5c8984;
+}
+
+.promo3:hover ~ .promo3Z, .promo3:hover {
+	color: #7c79c7;
+}
+
+.promo4:hover {
+	color:  #b6d3a6;
+}
+
+.promo5:hover {
+	color:  #c09eb4;
+}
+
+.promo6:hover {
+	color:  #7486c1;
+}
+
+.promo7:hover {
+	color: #9f959b;
+}
+*/
+.promo8 {
+	color: #87bead /*#70c4a5*/;
+}
+/*
+.promo9:hover ~ .promo9Z, .promo9:hover {
+	color:  #ee924a;
+}
+
+.promo10:hover {
+	color: #9ac0b5;
+}
+
+.promo11:hover {
+	color: #bdb983;
+}
+
+.promo12:hover {
+	color: #50e1ca;
+}
+
+.promo13:hover {
+	color: #c39625;
+}
+
+.promo14:hover {
+	color: #6cc6dd;
+}
+
+.promo15:hover {
+	color: #6eb663;
+}
+
+.promo16:hover {
+	color: #cda9c9;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 // Note:  way too many CSS bits to include all of them on HyperWares. Maybe do the most useful ones, then a hearty chunk of obscure ones;
