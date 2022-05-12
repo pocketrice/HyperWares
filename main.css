@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Alegreya+SC:wght@800&family=Nova+Mono&display=swap');
 
 @font-face {
-	font-family: "Nugelo Serif";
-	src: url(nugeloserif.otf);
-}
-
-@font-face {
 	font-family: "Albertus MT";
 	src: url(AlbertusMT.otf);
 }
@@ -39,10 +34,10 @@ header h1 {
 }
 
 header p {
-text-align: center;
-font-family: "Albertus MT";
-font-size: 16px;
-color: #848F8F;
+	text-align: center;
+	font-family: "Albertus MT";
+	font-size: 16px;
+	color: #848F8F;
 }
 
 span#subtitle {
@@ -94,9 +89,9 @@ footer {
 }
 
 h1 span {
-position: absolute;
-left: 41.5%;
-top: 43px;
+	position: absolute;
+	left: 41.5%;
+	top: 43px;
 }
 
 #templogo {
@@ -109,24 +104,26 @@ top: 43px;
 }
 
 
-div.nav {
-font-family: Cascadia Code;
-font-size: 18px;
-
-color: #96A9A7;
-cursor: pointer;
-position: relative;
-top: -30px;
-}
-
-div.nav > * { /* OMEGA WIP!! Replace with flexbox or something */
+div.nav > * {
+	font-family: Cascadia Code;
+	font-size: 18px;
+	color: #96A9A7;
+	cursor: pointer;
+	top: 30px;
 	position: absolute;
 	transition: color 0.7s;
+	text-decoration: none;
 }
 
+
 div.nav > *:hover {
-color: #E0E5EC;
+	color: #D1D5E2;
 }
+
+.active {
+	color: #D4FBFF !important;
+}
+
 
 #essentials { 
 	left: 7%;
@@ -166,13 +163,13 @@ color: #E0E5EC;
 }
 
 div#promo-panel + h2 {
-position: absolute;
-font-family: Cascadia Code;
-font-size: 30px;
-font-variant: small-caps;
-color: #DFF9FF;
-left: 50%;
-top: 28%;
+	position: absolute;
+	font-family: Cascadia Code;
+	font-size: 30px;
+	font-variant: small-caps;
+	color: #DFF9FF;
+	left: 50%;
+	top: 28%;
 }
 
 #promo-text {
@@ -202,16 +199,46 @@ top: 28%;
 	font-family: Inconsolata;
 	font-size: 13px;
 	margin-left: 100px;
-	margin-top: 150px;
+	margin-top: 140px;
 	color: #121f21;
 }
 
 #promo-panel-text > * {
-		transition: color 0.9s;
-		user-select: none;
+	transition: color 0.9s;
+	user-select: none;
 }
 
-/* TODO: use some JS magic to condense this all like in InternetTimeline */
+
+.checkoutButton {
+	position: absolute;
+	right: 210px;
+	top: 90px;
+	/*box-shadow:inset 0px 1px 3px 0px #91b8b3;*/
+	cursor: pointer;
+	border-radius: 15px;
+	padding: 8px 30px;
+	background-color: #9BBAB65E; /*linear-gradient(to bottom,#9BBAB65E, #8AB8B95E);*/
+	font-size: 18px;
+	transition: background-color 0.8s, transform 1s, color 0.8s, translate 0.2s;
+	text-decoration: none;
+	color: #3C494C;
+}
+
+.checkoutButton:hover {
+	background-color: #ADFFFC4E; /*linear-gradient(to bottom, #748C8B5E, #6283855E);*/
+	color: #40575D;
+	transform: scaleX(103%) scaleY(101%) rotateZ(1.5deg);
+}
+
+.checkoutButton:active {
+	background-color: #72ADAC4E;
+	color: #2A393D;
+	translate: 0 1px;
+}
+
+
+
+/* TODO: use some JS magic to condense this like in InternetTimeline */
 /*
 .promo1:hover { 
 color: #558b4c;
