@@ -1,6 +1,24 @@
 window.addEventListener('load', function() {
 	var navElement = document.getElementsByClassName("navElement");
 	var navCount = 0;
+	var colorPicker = document.getElementById("color-picker");
+	var colorPickerDisplay = document.getElementById("color-picker-display");
+
+
+	colorPicker.addEventListener("input", function() {
+		colorPickerDisplay.innerText = colorPicker.value;
+	});
+
+	
+
+	function submit() {
+		alert("Your order has been successfully queued. Thank you!");
+	}
+
+	function reset() {
+		colorPickerDisplay.innerText = "------";
+	}
+	
 
 	Mousetrap.bind('tab', function() { // TODO: hide mouse; when mouse moved/clicked revert 'mouseless mode'.
 		navCount++;
@@ -102,5 +120,6 @@ window.addEventListener('load', function() {
 	ctx.fill();
 	ctx.closePath();*/
 
+		colorPickerDisplay.innerText = colorPicker.value;
 	console.log("Script loaded. (" + performance.now() + "ms)");
 })

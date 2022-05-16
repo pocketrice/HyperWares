@@ -1,6 +1,7 @@
 /* IMPORTANT -- MOVE INTO INTERNAL CSS ONCE ALL DONE */
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Alegreya+SC:wght@800&family=Nova+Mono&display=swap');
 
+
 @font-face {
 	font-family: "Albertus MT";
 	src: url(AlbertusMT.otf);
@@ -21,6 +22,18 @@
 	src: url(CascadiaCodeItalic.ttf);
 }
 
+@font-face {
+	font-family: "Monaco";
+	src: url(Monaco.ttf);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 500,
+  'GRAD' 200,
+  'opsz' 48
+}
 
 
 header h1 {
@@ -237,7 +250,53 @@ div#promo-panel + h2 {
 }
 
 
+form {
+	color: #CCFFE8;
+	font-family: Gill Sans;
+	position: relative;
+	left: 30px;
+	padding: 20px 30px;
+	margin-right: 500px;
+		background-image: linear-gradient(to top left, #FFFDDB30, #F9FFD825);
+		border-radius: 25px;
+}
 
+form p.submitCaption {
+	font-size: 12.5px;
+	color: #7F9692;
+	position: relative;
+	top: -8px;
+
+}
+
+form .material-symbols-outlined {
+	position: relative;
+	top: 3px;
+}
+
+form em {
+	font-style: normal;
+	color: #CADFD4;
+	font-size: 15px;
+}
+
+form hr { /* TEMP */
+border: 0.5px solid #7A969D;
+}
+
+#color-picker-display {
+	font-family: monospace;
+	position: absolute;
+	left: 108px;
+	top: 838px;
+	color: #CADFD4;
+}
+
+div.advert img {
+	width: 200px;
+	border-radius: 10px;
+
+}
 /* TODO: use some JS magic to condense this like in InternetTimeline */
 /*
 .promo1:hover { 

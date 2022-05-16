@@ -12,6 +12,8 @@
 
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 	<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js" defer></script>
 	<script src="script.js" defer></script>
@@ -39,9 +41,33 @@
 	<canvas id="logo" width="275" height="275"></canvas>
 </header>
 
-<h2>Checkout</h2>
-<!-- ADVERT IMAGES like on clippy website -->
+<!-- ADVERT IMAGES like on clippy website; TODO: adaptive order form based on choices; e.g. choose credit card and get credit card options; replace all hrs with divs-->
+<div class="advert">
+<img src="warehouse.webp">
 <p>/* Purchase a bundle today and get a discount on your entire purchase. */</p>
+</div>
+<form method="post" enctype="text/plain" onreset="reset()" onsubmit="submit()">
+<span class="material-symbols-outlined">person</span>&nbsp;&nbsp;Name<br><p class="submitCaption">Input an identifying name (preferably full) for this order.</p><input type="text" pattern="^[a-z ,.'-]+$" placeholder="John Doe"><br><br><br>
+
+<span class="material-symbols-outlined">mail</span>&nbsp;&nbsp;Email Address<br><p class="submitCaption">Input a secure, valid email address for additional order information and verification.</p><input type="email" pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$" placeholder="email@address.com"><br><br><br>
+
+<span class="material-symbols-outlined">add_card</span>&nbsp;&nbsp;Payment Method<br><p class="submitCaption">Choose the transaction method you prefer the most.</p><em><input type="radio" name="payment-method" value="credit" checked><label for="credit">Credit/Debit</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="payment-method" value="cash"><label for="cash">Cash</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="payment-method" id="check" value="check"><label for="check">Check</label></em><br><br><br><br><hr><br>
+
+<span class="material-symbols-outlined">calendar_month</span>&nbsp;&nbsp;Pickup Date<br><p class="submitCaption">Choose the date you prefer the most.</p><input type="date"><br><br><br><br> <!-- Show which dates are available.-->
+
+<span class="material-symbols-outlined">priority</span>&nbsp;&nbsp;Priority<br><p class="submitCaption">In the event that your date is unavailable, we will determine order priority based on this.</p><em>Lowest urgency (10-15 days)&nbsp;&nbsp;&nbsp;<input type="range" step="25" value="50">&nbsp;&nbsp;&nbsp;Highest urgency (1-2 days)</em><br><br><br><br>
+
+<span class="material-symbols-outlined">format_paint</span>&nbsp;&nbsp;Color Scheme<br><p class="submitCaption">If available, you will receive your products in a nice and quaint collectible tin centered around this color!<p><input type="color" value="#FFFFFF" id="color-picker"><code id="color-picker-display">------</code><br><br><br><br><hr><br><!-- Make a check that "checks" if a color is available (e.g. no overly bright colors). Make it purposely load for a few milliseconds.-->
+
+<span class="material-symbols-outlined">receipt_long</span>&nbsp;&nbsp;Would you like a receipt?<br><p class="submitCaption">Your receipt will be digitally emailed to your specified address.</p><input type="radio" name="receipt" value="receiptYes" checked><label for="receiptYes">Yes</label><input type="radio" name="receipt" value="receiptNo"><label for="receiptNo">No</label>
+<br><br><br><br>
+<input type="reset">
+<input type="submit" value="Submit order" class="submitButton"></form><br><br><br><br>
+
+
+
+
+
 <footer><span class="disclaimer">Disclaimer:</span> This is a fictional business created in a Web Programming class for the purpose of learning HTML and CSS. Note that <strong>no products or services are actually for sale</strong>.</footer>
 </body>
 </html>
