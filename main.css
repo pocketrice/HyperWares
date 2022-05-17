@@ -266,7 +266,7 @@ form {
 }
 
 div.advert {
-	background-image: linear-gradient(to top left, #1B1B19D0, #1F1F1DC0);
+	background-image: linear-gradient(to top left, #1B1B19C0, #1F1F1DB0);
 	border-radius: 25px;
 	position: relative;
 	float: right;
@@ -275,7 +275,7 @@ div.advert {
 	font-size: 10px;
 	margin-right: 40px;
 	margin-left: 100px;
-	padding: 20px 20px;
+	padding: 20px;
 }
 
 form p.submitCaption {
@@ -288,7 +288,7 @@ form p.submitCaption {
 
 form .material-symbols-outlined {
 	position: relative;
-	top: 3px;
+	top: 4px;
 }
 
 form em {
@@ -303,9 +303,10 @@ border: 0.5px solid #7A969D;
 
 #color-picker-display {
 	font-family: monospace;
-	position: absolute;
-	left: 108px;
-	top: 838px;
+	position: relative;
+	top: -5px;
+	left: 10px;
+	margin-right: 20px;
 	color: #CADFD4;
 }
 
@@ -333,22 +334,42 @@ div.advert p.advert-name {
 form .form-validator {
 font-size: 14px;
 font-family: Inconsolata;
+position: relative;
+left: 25px;
+transition: opacity 0.8s;
+opacity: 0;
 }
 
-form .form-validator:not(span) {
+form .form-validator .material-symbols-outlined {
 	position: relative;
-	
+	top: 7px;
 
 }
 
+form .form-loading span {
+animation: loading;
+animation-iteration-count: infinite;
+animation-duration: 1.5s;
+animation-timing-function: linear;
+}
+
+@keyframes loading {
+	0% {transform: rotateZ(0deg)}
+	100% {transform: rotateZ(180deg)}
+}
+
+form .form-loading {
+	color: #D0C8B1;
+}
 
 form .form-fail {
-	color: #ED666E;
+	color: #EE727E;
 }
 
 form .form-valid {
 	color: #76CA8D;
 }
+
 
 
 /* TODO: use some JS magic to condense this like in InternetTimeline */
