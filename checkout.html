@@ -43,15 +43,26 @@
 
 <!-- ADVERT IMAGES like on clippy website; TODO: adaptive order form based on choices; e.g. choose credit card and get credit card options; replace all hrs with divs-->
 <div class="advert">
-<img src="warehouse.webp">
-<p>/* Purchase a bundle today and get a discount on your entire purchase. */</p>
+<img src="StackContainers.webp" height="135">
+<p class="advert-name">Your favorite elements, now brilliantly packaged.</p>
+<p class="advert-caption">/* Purchase a bundle today and get a discount on your entire purchase. */</p>
 </div>
+
+<div class="basket">
+
+
+
+
+</div>
+
+
+
 <form method="post" enctype="text/plain" onreset="reset()" onsubmit="submit()">
-<span class="material-symbols-outlined">person</span>&nbsp;&nbsp;Name<br><p class="submitCaption">Input an identifying name (preferably full) for this order.</p><input type="text" pattern="^[a-z ,.'-]+$" placeholder="John Doe"><br><br><br>
+<span class="material-symbols-outlined">person</span>&nbsp;&nbsp;Name<br><p class="submitCaption">Input an identifying name (preferably full) for this order.</p><input type="text" pattern="^[a-z ,.'-]+$" placeholder="John Doe"><p class="form-validator form-fail"><span class="material-symbols-outlined">error</span>&nbsp;Invalid name.</p><br><br><br>
 
-<span class="material-symbols-outlined">mail</span>&nbsp;&nbsp;Email Address<br><p class="submitCaption">Input a secure, valid email address for additional order information and verification.</p><input type="email" pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$" placeholder="email@address.com"><br><br><br>
+<span class="material-symbols-outlined">mail</span>&nbsp;&nbsp;Email Address<br><p class="submitCaption">Input a secure, valid email address for additional order information and verification.</p><input type="email" pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$" placeholder="email@address.com"><p class="form-validator form-valid"><span class="material-symbols-outlined">done</span>&nbsp;Valid!</p><br><br><br>
 
-<span class="material-symbols-outlined">add_card</span>&nbsp;&nbsp;Payment Method<br><p class="submitCaption">Choose the transaction method you prefer the most.</p><em><input type="radio" name="payment-method" value="credit" checked><label for="credit">Credit/Debit</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="payment-method" value="cash"><label for="cash">Cash</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="payment-method" id="check" value="check"><label for="check">Check</label></em><br><br><br><br><hr><br>
+<span class="material-symbols-outlined">add_card</span>&nbsp;&nbsp;Payment Method<br><p class="submitCaption">Choose the transaction method you prefer the most.</p><em><label><input type="radio" name="payment-method" value="credit" checked>Credit/Debit</label>&nbsp;&nbsp;&nbsp;<label><input type="radio" name="payment-method" value="cash">Cash</label>&nbsp;&nbsp;&nbsp;<label><input type="radio" name="payment-method" id="check" value="check">Check</label></em><br><br><br><br><hr><br>
 
 <span class="material-symbols-outlined">calendar_month</span>&nbsp;&nbsp;Pickup Date<br><p class="submitCaption">Choose the date you prefer the most.</p><input type="date"><br><br><br><br> <!-- Show which dates are available.-->
 
@@ -59,7 +70,7 @@
 
 <span class="material-symbols-outlined">format_paint</span>&nbsp;&nbsp;Color Scheme<br><p class="submitCaption">If available, you will receive your products in a nice and quaint collectible tin centered around this color!<p><input type="color" value="#FFFFFF" id="color-picker"><code id="color-picker-display">------</code><br><br><br><br><hr><br><!-- Make a check that "checks" if a color is available (e.g. no overly bright colors). Make it purposely load for a few milliseconds.-->
 
-<span class="material-symbols-outlined">receipt_long</span>&nbsp;&nbsp;Would you like a receipt?<br><p class="submitCaption">Your receipt will be digitally emailed to your specified address.</p><input type="radio" name="receipt" value="receiptYes" checked><label for="receiptYes">Yes</label><input type="radio" name="receipt" value="receiptNo"><label for="receiptNo">No</label>
+<span class="material-symbols-outlined">receipt_long</span>&nbsp;&nbsp;Would you like a receipt?<br><p class="submitCaption">Your receipt will be digitally emailed to your specified address.</p><em><label><input type="radio" name="receipt" value="receiptYes" checked>Yes</label>&nbsp;&nbsp;<label><input type="radio" name="receipt" value="receiptNo">No</label></em>
 <br><br><br><br>
 <input type="reset">
 <input type="submit" value="Submit order" class="submitButton"></form><br><br><br><br>

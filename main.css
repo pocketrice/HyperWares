@@ -27,7 +27,7 @@
 	src: url(Monaco.ttf);
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined { /* Imported from Google Icons for MD3 icons */
   font-variation-settings:
   'FILL' 1,
   'wght' 500,
@@ -35,6 +35,9 @@
   'opsz' 48
 }
 
+header {
+visibility: hidden;
+}
 
 header h1 {
 	text-align: center;
@@ -94,6 +97,7 @@ footer {
 	font-size: 12px;
 	position: absolute;
 	bottom: -10px;
+	visibility: hidden;
 }
 
 .disclaimer {
@@ -256,9 +260,22 @@ form {
 	position: relative;
 	left: 30px;
 	padding: 20px 30px;
-	margin-right: 500px;
+	margin-right: 580px;
 		background-image: linear-gradient(to top left, #FFFDDB30, #F9FFD825);
 		border-radius: 25px;
+}
+
+div.advert {
+	background-image: linear-gradient(to top left, #1B1B19D0, #1F1F1DC0);
+	border-radius: 25px;
+	position: relative;
+	float: right;
+	font-family: Monaco;
+	color: #768181;
+	font-size: 10px;
+	margin-right: 40px;
+	margin-left: 100px;
+	padding: 20px 20px;
 }
 
 form p.submitCaption {
@@ -294,9 +311,46 @@ border: 0.5px solid #7A969D;
 
 div.advert img {
 	width: 200px;
-	border-radius: 10px;
+	border-radius: 15px;
+	position: relative;
+	margin-left: 10px;
+}
+
+div.advert p.advert-caption {
+	position: relative;
+	top: 5px;
+}
+
+div.advert p.advert-name {
+	position: absolute;
+	color: #81C0A4;
+	font-size: 16px;
+	top: 40px;
+	left: 250px;
+	right: 20px;
+}
+
+form .form-validator {
+font-size: 14px;
+font-family: Inconsolata;
+}
+
+form .form-validator:not(span) {
+	position: relative;
+	
 
 }
+
+
+form .form-fail {
+	color: #ED666E;
+}
+
+form .form-valid {
+	color: #76CA8D;
+}
+
+
 /* TODO: use some JS magic to condense this like in InternetTimeline */
 /*
 .promo1:hover { 
