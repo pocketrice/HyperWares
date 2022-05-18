@@ -370,6 +370,43 @@ form .form-valid {
 	color: #76CA8D;
 }
 
+input[type=text], input[type=email], input[type=date] {
+	box-sizing: border-box;
+	font-family: Inconsolata;
+	padding: 5px 10px;
+	box-shadow: 3px 3px 18px #35322d;
+	border-radius: 6px;
+	background-color: #c3fffb8d;
+	border: solid 2px #374d47;
+	transition: background-color 1s, border-color 1s, border 1s;
+}
+
+input[type=text]:hover, input[type=email]:hover, input[type=date]:hover {
+	border-color: #608078;
+	background-color: #c9fff6ad;
+}
+
+
+input[type=text]:focus, input[type=email]:focus, input[type=date]:focus {
+outline: none !important;
+border: solid 3.5px;
+border-color: #598d99;
+	background-color: #c9fff6bd;
+
+}
+
+input[type=text]::placeholder, input[type=email]::placeholder {
+	color: #30484a;
+}
+
+input[type=reset], input[type=submit] {
+	font-family: Inconsolata;
+	padding: 5px 12px;
+		background-color: #c9fff6bd;
+		border-radius: 3px;
+		border: 0;
+}
+
 
 
 /* TODO: use some JS magic to condense this like in InternetTimeline */
