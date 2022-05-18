@@ -34,7 +34,7 @@ window.addEventListener('load', function() {
 				{
 					console.assert(tinycolor(colorPicker.value).isValid(), "Invalid tinycolor!" + colorPicker.value);
 
-					if (i == 3)
+					if (i == 3) // Color picker
 					{
 						if ((tinycolor(colorPicker.value).getBrightness() > 50) && (tinycolor(colorPicker.value).getBrightness() < 230))
 						{
@@ -49,8 +49,26 @@ window.addEventListener('load', function() {
 						break validator;
 					}
 
+					if (i == 2) // Date picker
+					{
+						var datePicked = new Date(validationFields[i].value);
+
+						if ((datePicked < Date.now()) || (Math.abs(Date.now() - datePicked) > (30 * 24 * 60 * 60 * 1000)))
+						{
+							validationLabel[i].classList.add('form-fail');
+							validationLabel[i].innerHTML = "<span class='material-symbols-outlined'>error</span>&nbsp;" + invalidMessage[i];
+						}
+						else
+						{
 						validationLabel[i].classList.add('form-valid');
 						validationLabel[i].innerHTML = "<span class='material-symbols-outlined'>done</span>&nbsp;" + validMessage[i];
+						}
+						break validator;
+					}
+
+
+					validationLabel[i].classList.add('form-valid');
+					validationLabel[i].innerHTML = "<span class='material-symbols-outlined'>done</span>&nbsp;" + validMessage[i];
 				}
 				else
 				{
@@ -72,9 +90,18 @@ window.addEventListener('load', function() {
 	}
 
 
-	function submit() {
-		alert("Your order has been successfully queued. Thank you!");
-	}
+	$(" #checkoutForm ").reset(function(e) { // ULTRA WIP
+		if (validationFields.forEach(element => ((element.classList.contains("form-fail")) ? true : false)) == true)
+		{
+			alert("Unable to submit: you have one or more invalid fields.")
+			e.preventDefault();
+		}
+		else
+		{
+			alert("Successfully submitted your order. Thank you for your business!")
+			e.preventDefault();
+		}
+	})
 
 	function reset() {
 		colorPickerDisplay.innerText = "------";

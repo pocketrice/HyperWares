@@ -7,6 +7,7 @@
 	<meta name="description" content="An imaginary marketplace focused on all your HTML quick-fix needs. An aesthetically relaxed yet informative documentation on HTML's finest elements.">
 	<meta name="author" content="Lucas">
 	<meta name="keywords" content="HTML, CSS, marketplace, project">
+	<meta name="copyright" content="2022">
 
 	<title>The Hypertext Warehouse | Checkout</title>
 
@@ -16,6 +17,7 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
 	<script src="tinycolor.js" defer></script>
 	<script src="script.js" defer></script>
 
@@ -58,14 +60,14 @@
 
 
 
-<form method="post" enctype="text/plain" onreset="reset()" onsubmit="submit()">
+<form method="post" enctype="text/plain" id="checkoutForm">
 <span class="material-symbols-outlined">person</span>&nbsp;&nbsp;Name<br><p class="submitCaption">Input an identifying name (preferably full) for this order.</p><input type="text" pattern="^[A-Za-z ,.'-]+$" placeholder="John Doe" class="inputNeedsValidation"><span class="form-validator form-fail"><span class="material-symbols-outlined">error</span>&nbsp;Must be only alphabetic characters</span><br><br><br>
 
 <span class="material-symbols-outlined">mail</span>&nbsp;&nbsp;Email Address<br><p class="submitCaption">Input a secure, valid email address for additional order information and verification.</p><input type="email" pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$" placeholder="email@address.com" class="inputNeedsValidation"><span class="form-validator form-valid"><span class="material-symbols-outlined">done</span>&nbsp;Valid!</span><br><br><br>
 
 <span class="material-symbols-outlined">add_card</span>&nbsp;&nbsp;Payment Method<br><p class="submitCaption">Choose the transaction method you prefer the most.</p><em><label><input type="radio" name="payment-method" value="credit" checked>Credit/Debit</label>&nbsp;&nbsp;&nbsp;<label><input type="radio" name="payment-method" value="cash">Cash</label>&nbsp;&nbsp;&nbsp;<label><input type="radio" name="payment-method" id="check" value="check">Check</label></em><br><br><br><br><hr><br>
 
-<span class="material-symbols-outlined">calendar_month</span>&nbsp;&nbsp;Pickup Date<br><p class="submitCaption">Choose the date you prefer the most.</p><input type="date" class="inputNeedsValidation"><span class="form-validator form-loading"><span class="material-symbols-outlined">cached</span>&nbsp;Checking validity...</span><br><br><br><br> <!-- Show which dates are available.-->
+<span class="material-symbols-outlined">calendar_month</span>&nbsp;&nbsp;Pickup Date<br><p class="submitCaption">Choose the date you prefer the most. Must be within 30 days.</p><input type="date" class="inputNeedsValidation"><span class="form-validator form-loading"><span class="material-symbols-outlined">cached</span>&nbsp;Checking validity...</span><br><br><br><br> <!-- Show which dates are available.-->
 
 <span class="material-symbols-outlined">priority</span>&nbsp;&nbsp;Priority<br><p class="submitCaption">In the event that your date is unavailable, we will determine order priority based on this.</p><em>Lowest urgency (10-15 days)&nbsp;&nbsp;&nbsp;<input type="range" step="25" value="50">&nbsp;&nbsp;&nbsp;Highest urgency (1-2 days)</em><br><br><br><br>
 

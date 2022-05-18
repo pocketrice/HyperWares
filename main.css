@@ -375,10 +375,10 @@ input[type=text], input[type=email], input[type=date] {
 	font-family: Inconsolata;
 	padding: 5px 10px;
 	box-shadow: 3px 3px 18px #35322d;
-	border-radius: 6px;
 	background-color: #c3fffb8d;
 	border: solid 2px #374d47;
-	transition: background-color 1s, border-color 1s, border 1s;
+	 	border-radius: 6px;
+	transition: background-color 1s, border 0.5s;
 }
 
 input[type=text]:hover, input[type=email]:hover, input[type=date]:hover {
@@ -389,10 +389,8 @@ input[type=text]:hover, input[type=email]:hover, input[type=date]:hover {
 
 input[type=text]:focus, input[type=email]:focus, input[type=date]:focus {
 outline: none !important;
-border: solid 3.5px;
-border-color: #598d99;
-	background-color: #c9fff6bd;
-
+border:  solid 3.5px#598d99;
+background-color: #c9fff6bd;
 }
 
 input[type=text]::placeholder, input[type=email]::placeholder {
@@ -401,10 +399,20 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 
 input[type=reset], input[type=submit] {
 	font-family: Inconsolata;
-	padding: 5px 12px;
-		background-color: #c9fff6bd;
-		border-radius: 3px;
+	font-size: 15px;
+	color: #2E4A45;
+	padding: 5px 15px;
+		background-color: #A4FFD2BD;
+		border-radius: 5px;
 		border: 0;
+		transition: background-color 1s, color 1s;
+
+}
+
+input[type=reset]:hover, input[type=submit]:hover {
+	background-color: #B4F1D0;
+	color: #548382;
+	cursor: pointer;
 }
 
 
