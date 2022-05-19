@@ -35,6 +35,10 @@
   'opsz' 48
 }
 
+. { /* Google Icon fill override */
+  font-variation-settings: 'FILL' 1 !important;
+}
+
 header {
 visibility: hidden;
 }
@@ -277,6 +281,48 @@ div.advert {
 	margin-left: 100px;
 	padding: 20px;
 }
+
+div.basket {
+	background-image: linear-gradient(to top left, #9ACEC920, #89B4A235);
+	border-radius: 40px;
+	position: relative;
+	float: right;
+	top: 300px;
+	left: 530px;
+	padding: 30px 80px 50px 80px;
+	font-family: Gill Sans;
+}
+
+span.basketItems {
+	font-family: Inconsolata;
+}
+
+div.basket :not(span.basketItems, .material-symbols-outlined) {
+	font-family: Gill Sans;
+	font-weight: normal;
+
+}
+
+div.basket .material-symbols-outlined {
+	position: relative;
+	top: 5px;
+	font-size: 23px;
+	color: #202121;
+}
+
+div.basket hr {
+	border: solid 1px #1C3B3B;
+}
+
+input[type="number"]
+{
+	width: 30px;
+	margin: 0 20px;
+	padding: 5px;
+	font-family: Inconsolata;
+}
+
+
 
 form p.submitCaption {
 	font-size: 12.5px;
