@@ -24,10 +24,10 @@
 </head>
 <body>
 	<img src="rain-park.jpg" class="backdrop">
-<header>
+<header class="hpOverride">
 	<div id="banner"></div>
 	<img src="favicon.png" id="templogo">
-	<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Hypertext<br><span>&nbsp;&nbsp;&nbsp;&nbsp;Warehouse</span></h1>
+	<h1><span id="hpTitleTop">The Hypertext</span><br><span id="hpTitleBottom">Warehouse</span></h1>
 
 	<div class="nav">
 		<a class="navElement" id="essentials" href="essentials.html">Essentials</a>
@@ -46,9 +46,9 @@
 
 <!-- ADVERT IMAGES like on clippy website; TODO: adaptive order form based on choices; e.g. choose credit card and get credit card options; replace all hrs with divs-->
 <div class="advert">
-<img src="StackContainers.webp" height="135">
-<p class="advert-name">Your favorite elements, now brilliantly packaged.</p>
-<p class="advert-caption">/* Purchase a bundle today and get a discount on your entire purchase. */</p>
+<img src="StackContainers.webp" height="135" id="advert-img">
+<p id="advert-name">Your favorite elements, now brilliantly packaged.</p>
+<p id="advert-caption">/* Purchase a bundle today and get a discount on your entire purchase. */</p>
 </div>
 
 <div class="basket">
@@ -87,184 +87,29 @@
 <input type="submit" value="Submit order" class="submitButton"></form><br><br><br><br>
 
 
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="essentials.html">Essentials</a></li>
+      <li><a href="markup.html">Markdown</a></li>
+      <li><a href="sandbox.html">Sandbox</a></li>
+    </ul>
+  </nav> 
+</div>
+
+<div class="menu-bg" id="menu-bg"></div>
 
 
 
-<footer><span class="disclaimer">Disclaimer:</span> This is a fictional business created in a Web Programming class for the purpose of learning HTML and CSS. Note that <strong>no products or services are actually for sale</strong>.</footer>
+
+
+<footer class="hpOverride"><span class="disclaimer">Disclaimer:</span> This is a fictional business created in a Web Programming class for the purpose of learning HTML and CSS. Note that <strong>no products or services are actually for sale</strong>.</footer>
 </body>
 </html>
 
-
-<!--
-
-USEFUL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-
-TODO: document, organize, and add all possible HTML elements from the above link. (most sections are filled, but not all -- mostly the earlier sections).
-
-
-PRODUCT SELECTION: HTML
-
-======== Essentials =======
-html
-head
-body
-div
-a
-img
-link
-script
-[href]
-[rel]
-[src]
-=======================
-
-
-
-======== Formatting =======
-strong
-em
-small
-span
-p
-&nbsp;
-blockquote
-figure
-hr
-
-=======================
-
-
-- The Binder Bundle
-	ul, ol, li / tr, td, table
-
-- The Metatag Bundle
-	meta, [charset], [name], [content]
-
-
-======== Attributes =======
-[class]
-[id]
-[defer]
-[onscroll]
-[onclick]
-[target]
-[loading]
-[type]
-
-=================
-
-
-
-======= Sectioning =====
-address
-article
-aside
-footer
-header
-h1-h6
-main
-nav
-section
-===============
-
-======= Semantics =====
-abbr
-b
-bdi
-bdo
-cite
-code
-data
-dfn
-i
-kbd
-mark
-q
-rp
-rt
-ruby
-samp
-time
-var
-wbr
-===============
-
-
-
-
-======== Multimedia =======
-map
-area
-audio
-video
-track
-embed
-iframe
-picture
-object
-==================
-
-
-======== Graphics / Rendering ========
-svg
-canvas
-===============
-
-
-
-===== Forms and Fields ========
-button
-datalist
-fieldlist
-form
-input
-label
-legend
-meter
-optgroup
-option
-output
-progress
-select
-textarea
-=============
-
-
-
-===== Deprecated ======
-acronym
-applet
-basefont
-bgsound
-big
-blink
-center
-content
-dir
-font
-frame
-frameset
-hgroup
-image
-keygen
-marquee
-menuitem
-nobr
-noembed
-noframes
-param
-plaintext
-rb
-rtc
-shadow
-spacer
-strike
-tt
-xmp
-==========
-
-
-
-
-
--->

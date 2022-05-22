@@ -35,23 +35,140 @@
   'opsz' 48
 }
 
-. { /* Google Icon fill override */
+.materialSymOverride { /* Google Icon fill override */
   font-variation-settings: 'FILL' 1 !important;
 }
 
-header {
-visibility: hidden;
+
+/* NAVIGATOR NOT MY WORK */
+#menu {
+  z-index: 2;
 }
 
-header h1 {
-	text-align: center;
+#menu-bar {
+  width: 45px;
+  height: 40px;
+  margin: 30px 0 20px 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: #7CAEA4;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  transition: 0.2s ease;
+  opacity: 0;
+}
+
+.nav ul {
+  padding: 0 22px;
+  font-family: Inconsolata;
+
+}
+
+.nav li {
+  list-style: none;
+  padding: 12px 0;
+}
+
+.nav li a {
+  color: #9CDAE9;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.nav li a:hover {
+	color: #DEDFF3;
+}
+
+.menu-bg, #menu {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: radial-gradient(circle, #4893A2, #51A4B2);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.change {
+  opacity: 1;
+}
+
+.change .bar {
+  background-color: white;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%,-30%);
+}
+
+/* END NAVIGATOR */
+
+
+header.hpOverride, footer.hpOverride { /* TODO: make the footer slide in and out; when you scroll to bottom it slides in and when not out. Use the code for the "to-top button" from kryptos. */
+	visibility: hidden !important;
+}
+
+header span#hpTitleTop {
+	left: 43%;
+	top: 15px;
+	font-family: "Marcellus SC";
+	font-size: 30px;
+	text-shadow: 0.8px 0.8px 4px #303c37;
+	font-weight: normal;
+	color: #99D6CD;
+	position: absolute;
+}
+
+header span#hpTitleBottom {
+	left: 44%;
 	font-family: "Marcellus SC";
 	font-size: 30px;
 	text-shadow: 0.8px 0.8px 4px #303c37;
 	margin-top: 10px;
 	font-weight: normal;
 	color: #99D6CD;
+	position: absolute;
+	top: 38px;
 }
+
+
 
 header p {
 	text-align: center;
@@ -101,7 +218,6 @@ footer {
 	font-size: 12px;
 	position: absolute;
 	bottom: -10px;
-	visibility: hidden;
 }
 
 .disclaimer {
@@ -109,11 +225,7 @@ footer {
 	font-style: italic;
 }
 
-h1 span {
-	position: absolute;
-	left: 41.5%;
-	top: 43px;
-}
+
 
 #templogo {
 	position: absolute;
@@ -169,8 +281,8 @@ div.nav > *:hover {
 	border-radius: 25px 20px 25px 20px;
 	z-index: -100;
 	left: 6.4%;
-	top: 30%;
-	padding: 50px 300px 300px 200px;
+	top: 140px;
+	padding: 50px 300px 310px 200px;
 }
 
 #banner {
@@ -193,7 +305,7 @@ div#promo-panel + h2 {
 	top: 28%;
 }
 
-#promo-text {
+#promoDesc {
 	color: #A9B8C0;
 	font-family: Inconsolata;
 	font-size: 18px;
@@ -201,9 +313,15 @@ div#promo-panel + h2 {
 	top: 37%;
 	margin-left: 50%;
 	margin-right: 10%;
+	transition: opacity 0.9s;
 }
 
-#promo-text > strong {
+#promoTitle {
+	transition: opacity 0.9s;
+}
+
+/* Useless code?
+#promoDesc > strong {
 	padding: 4px 8px;
 	border-radius: 7px;
 	background-image: linear-gradient(to bottom, #56CFD363, #79C8CC53);
@@ -212,15 +330,16 @@ div#promo-panel + h2 {
 
 }
 
-#promo-text > strong:hover {
+#promoDesc > strong:hover {
 	color:  #7AA9B0;
 }
+*/
 
 #promo-panel-text {
 	font-family: Inconsolata;
 	font-size: 13px;
 	margin-left: 100px;
-	margin-top: 140px;
+	margin-top: 100px;
 	color: #121f21;
 }
 
@@ -400,12 +519,12 @@ div.advert img {
 	margin-left: 10px;
 }
 
-div.advert p.advert-caption {
+div.advert p#advert-caption {
 	position: relative;
 	top: 5px;
 }
 
-div.advert p.advert-name {
+div.advert p#advert-name {
 	position: absolute;
 	color: #81C0A4;
 	font-size: 16px;
@@ -497,146 +616,3 @@ input[type=reset]:hover, input[type=submit]:hover {
 	color: #548382;
 	cursor: pointer;
 }
-
-
-
-/* TODO: use some JS magic to condense this like in InternetTimeline */
-/*
-.promo1:hover { 
-color: #558b4c;
-}
-
-.promo2:hover ~ .promo2Z, .promo2:hover {
-	color: #5c8984;
-}
-
-.promo3:hover ~ .promo3Z, .promo3:hover {
-	color: #7c79c7;
-}
-
-.promo4:hover {
-	color:  #b6d3a6;
-}
-
-.promo5:hover {
-	color:  #c09eb4;
-}
-
-.promo6:hover {
-	color:  #7486c1;
-}
-
-.promo7:hover {
-	color: #9f959b;
-}
-*/
-.promo8 {
-	color: #87bead /*#70c4a5*/;
-}
-/*
-.promo9:hover ~ .promo9Z, .promo9:hover {
-	color:  #ee924a;
-}
-
-.promo10:hover {
-	color: #9ac0b5;
-}
-
-.promo11:hover {
-	color: #bdb983;
-}
-
-.promo12:hover {
-	color: #50e1ca;
-}
-
-.promo13:hover {
-	color: #c39625;
-}
-
-.promo14:hover {
-	color: #6cc6dd;
-}
-
-.promo15:hover {
-	color: #6eb663;
-}
-
-.promo16:hover {
-	color: #cda9c9;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-// Note:  way too many CSS bits to include all of them on HyperWares. Maybe do the most useful ones, then a hearty chunk of obscure ones;
-
-PRODUCT SELECTION: CSS
-
-======== Essentials ========
-margin * (including top, left, right...)
-padding *
-color 
-background *
-position
-transforms (width/height)
-ID/Class selectors (*, .)
-===========================
-
-
-======== Typography ========
-font-family
-font-size
-etc.
-
-@font-face
-** all text-related bits
-======================
-
-
-
-======== Object Manipulation ======
-transform
-float
-opacity
-overflow *
-clip-path
-filter
-clamp()
-================
-
-
-========== UX ===========
-cursor
-user-select
-z-index
-border *
-pointer-events
-...
-==================
-
-
-
-======== Selectors ========
-List selector (A, B)
-Adjacent sibling (A + B)
-General sibling (A ~ B)
-Child combinator (A > B)
-Descendant combinator (A B)
-Column combinator (A || B)
-Pseudo-classes/elements (:, ::)
-===================

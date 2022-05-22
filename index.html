@@ -15,7 +15,7 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js" defer></script>
-	<script src="script.js" defer></script>
+	<script src="script-abbrev.js" defer></script>
 
 </head>
 <body>
@@ -23,7 +23,7 @@
 <header>
 	<div id="banner"></div>
 	<img src="favicon.png" id="templogo">
-	<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Hypertext<br><span>&nbsp;&nbsp;&nbsp;&nbsp;Warehouse</span></h1>
+	<h1><span id="hpTitleTop">The Hypertext</span><br><span id="hpTitleBottom">Warehouse</span></h1>
 
 	<div class="nav">
 		<a class="navElement" id="essentials" href="essentials.html">Essentials</a>
@@ -40,188 +40,12 @@
 	<canvas id="logo" width="275" height="275"></canvas>
 </header>
 
-<p id="promo-panel-text"><span class="promo1">&lt;!DOCTYPE html&gt;</span><br><span class="promo2">&lt;html&gt;</span><br><span class="promo3">&lt;head&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo4">&lt;meta charset="utf-8"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo5">&lt;title&gt;The Hypertext Warehouse&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo6">&lt;script src="abbrev.js" defer&gt;&lt;/script&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo7">&lt;base href="index.html" target="_blank"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo8">&lt;hw src="hyperwares.lib"&gt;</span><br><span class="promo3Z">&lt;/head&gt;</span><br><span class="promo9">&lt;body onscroll="detectPos()"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo10">&lt;img src="rain-park.jpg" class="backdrop" loading="lazy"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo11">&lt;canvas id="logo" width="275" height="275"&gt;&lt;/canvas&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo12">&lt;embed type="text/html" src="markup.html" width="500" height="250"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="promo13">&lt;hgroup&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Hypertext&lt;/h2&gt;&lt;h5&gt;Warehouse&lt;/h5&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/hgroup&gt;</span><br><span class="promo14">&lt;dfn&gt;Premier &lt;abbr title="noun; place of purchase"&gt;marketplace&lt;/abbr&gt;<br>for&lt;wbr&gt;effective site parts.&lt;/dfn&gt;</span><br><span class="promo15">&lt;p&gt;100,000+ parts serviced&lt;meter optimum="80" value="70"&gt;&lt;/meter&gt;&lt;/p&gt;</span><br><span class="promo16">&lt;footer&gt;&#38;ofcir;Quality parts for &lt;em&gt;unprecedented prices.&lt;/em&gt;&lt;/footer&gt;</span><br><span class="promo9Z">&lt;/body&gt;</span><br><span class="promo2Z">&lt;/html&gt;</span></p>
+<p id="promo-panel-text"><span id="promo1">&lt;!DOCTYPE html&gt;</span><br><span id="promo2">&lt;html&gt;</span><br><span id="promo3">&lt;head&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo4">&lt;meta charset="utf-8"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo5">&lt;title&gt;The Hypertext Warehouse&lt;/title&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo6">&lt;script src="abbrev.js" defer&gt;&lt;/script&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo7">&lt;base href="index.html" target="_blank"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo8">&lt;hw src="hyperwares.lib"&gt;</span><br><span id="promo3Z">&lt;/head&gt;</span><br><span id="promo9">&lt;body onscroll="detectPos()"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo10">&lt;img src="rain-park.jpg" class="backdrop" loading="lazy"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo11">&lt;canvas id="logo" width="275" height="275"&gt;&lt;/canvas&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo12">&lt;embed type="text/html" src="markup.html" width="500" height="250"&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="promo13">&lt;hgroup&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Hypertext&lt;/h2&gt;&lt;h5&gt;Warehouse&lt;/h5&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/hgroup&gt;</span><br><span id="promo14">&lt;dfn&gt;Premier &lt;abbr title="noun; place of purchase"&gt;marketplace&lt;/abbr&gt;<br>for&lt;wbr&gt;effective site parts.&lt;/dfn&gt;</span><br><span id="promo15">&lt;p&gt;100,000+ parts serviced&lt;meter optimum="80" value="70"&gt;&lt;/meter&gt;&lt;/p&gt;</span><br><span id="promo16">&lt;footer&gt;&#38;ofcir;Quality parts for &lt;em&gt;unprecedented prices.&lt;/em&gt;&lt;/footer&gt;</span><br><span id="promo9Z">&lt;/body&gt;</span><br><span id="promo2Z">&lt;/html&gt;</span></p>
 
-<!-- NOTE: promo-Z is TEMPORARY. Whenever time permits just make sure to remove Z and use JS to highlight all of that class on hover.-->
 <div id="promo-panel"></div>
-<h2>reimagine your website.</h2>
-<p id="promo-text">Think outside the box and refurbish your website with effective site parts that fit around your nuances and purposes, not the other way around.<br><br>
+<h2 id="promoTitle">reimagine your website.</h2>
+<p id="promoDesc">Think outside the box and refurbish your website with effective site parts that fit around your nuances and purposes, not the other way around.<br><br>
 <a href="checkout.html" class="checkoutButton">Browse our catalogue</a>
 <footer><span class="disclaimer">Disclaimer:</span> This is a fictional business created in a Web Programming class for the purpose of learning HTML and CSS. Note that <strong>no products or services are actually for sale</strong>.</footer>
 </body>
 </html>
-
-
-<!--
-
-USEFUL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-
-TODO: document, organize, and add all possible HTML elements from the above link. (most sections are filled, but not all -- mostly the earlier sections).
-
-
-PRODUCT SELECTION: HTML
-
-======== Essentials =======
-html
-head
-body
-div
-a
-img
-link
-script
-[href]
-[rel]
-[src]
-=======================
-
-
-
-======== Formatting =======
-strong
-em
-small
-span
-p
-&nbsp;
-blockquote
-figure
-hr
-
-=======================
-
-
-- The Binder Bundle
-	ul, ol, li / tr, td, table
-
-- The Metatag Bundle
-	meta, [charset], [name], [content]
-
-
-======== Attributes =======
-[class]
-[id]
-[defer]
-[onscroll]
-[onclick]
-[target]
-[loading]
-[type]
-
-=================
-
-
-
-======= Sectioning =====
-address
-article
-aside
-footer
-header
-h1-h6
-main
-nav
-section
-===============
-
-======= Semantics =====
-abbr
-b
-bdi
-bdo
-cite
-code
-data
-dfn
-i
-kbd
-mark
-q
-rp
-rt
-ruby
-samp
-time
-var
-wbr
-===============
-
-
-
-
-======== Multimedia =======
-map
-area
-audio
-video
-track
-embed
-iframe
-picture
-object
-==================
-
-
-======== Graphics / Rendering ========
-svg
-canvas
-===============
-
-
-
-===== Forms and Fields ========
-button
-datalist
-fieldlist
-form
-input
-label
-legend
-meter
-optgroup
-option
-output
-progress
-select
-textarea
-=============
-
-
-
-===== Deprecated ======
-acronym
-applet
-basefont
-bgsound
-big
-blink
-center
-content
-dir
-font
-frame
-frameset
-hgroup
-image
-keygen
-marquee
-menuitem
-nobr
-noembed
-noframes
-param
-plaintext
-rb
-rtc
-shadow
-spacer
-strike
-tt
-xmp
-==========
-
-
-
-
-
--->
