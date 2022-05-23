@@ -7,10 +7,9 @@ The grand market for all your HTML quick-fix needs. Stock up on spare elements l
 #
 
 > For your consideration:
-- Keep an eye on the project checklist -- plenty to do and plenty to plan. &nbsp;&nbsp;&nbsp;:minidisc:
-- Recommended browser: Firefox&nbsp;&nbsp;&nbsp;:bookmark_tabs:
-- Focus on responsiveness and UX _from the start!_ This project'll focus on more optimized and super-duper fast code. &nbsp;&nbsp;&nbsp;:trackball:
-- Big focus on all the intricacies of HTML/CSS/JS -- perfect to include in the 'marketplace' as well. Includes Bootstrap!
+- Keep an eye on the project checklist -- plenty to do and plenty to plan.
+- Recommended browser: Firefox
+- Focus on a more modern design (unlike previous projects)
 - Remember past projects' themings? Project 0 was "nice and simple", Project 1 was "early 2000s", etc... and Project 4 will focus on a blend of Kryptos and a touch of clean modernism.
 
 <br><br>
