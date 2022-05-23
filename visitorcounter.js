@@ -1,6 +1,6 @@
 // Credit to https://devppratik.hashnode.dev/website-visitor-counter-using-vanilla-javascript; edited to make it work on my website.
 
-const KEY = `5a6ecbe4-da54-11ec-9d64-0242ac120002`;
+const KEY = `b6b45d5e-5522-4371-b45d-23d82b384a35`;
 const NAMESPACE = "webclass.uaschools.org/xie.3/Project4/";
 const COUNT_URL = `https://api.countapi.xyz`;
 

@@ -1,15 +1,60 @@
 	function getRndInteger(min, max) { // Extracted from W3Schools
-  		return Math.floor(Math.random() * (max - min + 1) ) + min;
+		return Math.floor(Math.random() * (max - min + 1) ) + min;
 	}
 
 	
 
-function menuOnClick() {
-  document.getElementById("menu-bar").classList.toggle("change");
-  document.getElementById("nav").classList.toggle("change");
-  document.getElementById("menu-bg").classList.toggle("change-bg");
+	function menuOnClick() {
+		document.getElementById("menu-bar").classList.toggle("change");
+		document.getElementById("nav").classList.toggle("change");
+		document.getElementById("menu-bg").classList.toggle("change-bg");
+	}
+
+	function resetQuantity(num) {
+		document.getElementsByClassName("quantityNeedsValidation")[num].value = '';
+		calcPrices();
+	}
+
+
+	function calcPrices() {
+		var subtotalObj = document.getElementById("subtotalValue");
+		var taxObj = document.getElementById("taxValue");
+		var totalObj = document.getElementById("totalValue");
+		var unitPrice = ["0.99", "0.99", "1.99"]
+		const TAX_RATE = 0.575;
+
+		var subtotal = 0;
+		var tax = 0;
+		var total = 0;
+
+
+		for (let i = 0; i < 3; i++)
+		{
+			subtotal += +parseFloat(document.getElementsByClassName("quantityNeedsValidation")[i].value * unitPrice[i]);
+		}
+
+		subtotal = Math.round(subtotal*100)/100;
+		tax = (parseFloat(subtotal * TAX_RATE)).toFixed(2);
+		total = (parseFloat(+subtotal + +tax)).toFixed(2);
+
+		subtotalObj.innerText = "$" + subtotal;
+		taxObj.innerText = "$" + tax;
+		totalObj.innerText = "$" + total;
+
+	if ((document.getElementsByClassName("quantityNeedsValidation")[0].value.length == 0) || (document.getElementsByClassName("quantityNeedsValidation")[1].value.length == 0) || (document.getElementsByClassName("quantityNeedsValidation")[2].value.length == 0)) // Super inefficient!!
+	{
+		subtotalObj.innerText = "...";
+		taxObj.innerText = "...";
+		totalObj.innerText = "...";
+	}
 }
 
+for (let i = 0; i < 3; i++)
+{
+	document.getElementsByClassName("quantityNeedsValidation")[i].addEventListener("input", function(){
+		calcPrices();
+	});
+}
 
 
 window.addEventListener('load', function() {
@@ -31,14 +76,13 @@ window.addEventListener('load', function() {
 
 	if (randomAdvertValue != 4)
 	{
-	advertName.innerHTML = advertNameCollection[randomAdvertValue];
-	advertCaption.innerHTML = "/* " + advertCaptionCollection[randomAdvertValue] + " */";
-	advertImg.setAttribute("src", advertImgCollection[randomAdvertValue]);
-}
+		advertName.innerHTML = advertNameCollection[randomAdvertValue];
+		advertCaption.innerHTML = "/* " + advertCaptionCollection[randomAdvertValue] + " */";
+		advertImg.setAttribute("src", advertImgCollection[randomAdvertValue]);
+	}
 	colorPicker.addEventListener("input", function() {
 		colorPickerDisplay.innerText = colorPicker.value;
 	});
-
 
 
 	var validationFields = document.getElementsByClassName("inputNeedsValidation");
@@ -90,8 +134,8 @@ window.addEventListener('load', function() {
 						}
 						else
 						{
-						validationLabel[i].classList.add('form-valid');
-						validationLabel[i].innerHTML = "<span class='material-symbols-outlined'>done</span>&nbsp;" + validMessage[i];
+							validationLabel[i].classList.add('form-valid');
+							validationLabel[i].innerHTML = "<span class='material-symbols-outlined'>done</span>&nbsp;" + validMessage[i];
 						}
 						break validator;
 					}
@@ -105,7 +149,7 @@ window.addEventListener('load', function() {
 					validationLabel[i].classList.add('form-fail');
 					validationLabel[i].innerHTML = "<span class='material-symbols-outlined'>error</span>&nbsp;" + invalidMessage[i];
 				}
-		}, 1500)
+			}, 1500)
 
 				if (validationFields[i].value.length == 0) // If input is empty
 				{
@@ -119,11 +163,41 @@ window.addEventListener('load', function() {
 			})
 	}
 
+	function indirectTooltip(baseId, tooltipId) { // Generalized tooltip function; use this later!
+		document.getElementById(baseId).addEventListener("mouseover", function() {
+			document.getElementById(tooltipId).style.opacity = 1;
+		})
 
-	function reset() {
-		colorPickerDisplay.innerText = "------";
+		document.getElementById(baseId).addEventListener("mouseout", function() {
+			document.getElementById(tooltipId).style.opacity = 0;
+		})
 	}
-	
+
+	indirectTooltip("basketHelp", "basketInfo");
+
+	function inactivePage() {
+		var inactiveLinks = document.getElementsByClassName("inactive");
+		var inactiveWarning = document.getElementById("inactiveWarning");
+		var inactiveTimer;
+
+
+		console.log(inactiveLinks.length)
+		for (let i = 0; i < inactiveLinks.length; i++)
+		{
+			inactiveLinks[i].addEventListener("click", function() {
+				clearTimeout(inactiveTimer);
+				inactiveWarning.style.opacity = 1;
+				inactiveWarning.style.top = 140 + (i * 50) + "px";
+				inactiveWarning.style.left = 140 - (i * 20) + "px";
+				inactiveTimer = setTimeout(function() {
+					inactiveWarning.style.opacity = 0;
+				}, 2000)
+			})
+		}
+	}
+
+	inactivePage();
+
 
 	Mousetrap.bind('tab', function() { // TODO: hide mouse; when mouse moved/clicked revert 'mouseless mode'.
 		navCount++;
@@ -143,87 +217,6 @@ window.addEventListener('load', function() {
 			}
 		}
 	});
-
-	seamless.polyfill();
-
-
-
-	var cnv = document.getElementById("logo");
-	var ctx = cnv.getContext('2d');
-	/*
-	var base = ctx.createRadialGradient(182.5, 90.5, 10, 300, 200, 360);
-
-	base.addColorStop(0, "#FFFFFF"); // Color fix?
-	base.addColorStop(0.3, "#C2D6D7");
-	base.addColorStop(1, "#3E4D4F");*/
-	var base = "#FFFFFF";
-
-	var border = ctx.createRadialGradient(182.5, 90.5, 10, 300, 200, 360);
-
-	border.addColorStop(0, "#51677D");
-	border.addColorStop(1, "#8CB1E0")
-
-	ctx.beginPath();
-	ctx.fillStyle = border;
-	ctx.arc(162.5, 137.5, 112.5, 0, Math.PI*2, true)
-	ctx.fill();
-	ctx.closePath();
-
-	ctx.beginPath();
-	ctx.fillStyle = base;
-	ctx.arc(162.5, 137.5, 102.5, 0, Math.PI*2, true);
-	ctx.fill();
-	ctx.closePath();
-
-	ctx.beginPath();
-	ctx.fillStyle = "#14C7DE";
-	ctx.arc(162.5, 137.5, 102.5, 0, Math.PI*2, true);
-	ctx.fill();
-	ctx.closePath();
-	
-	ctx.beginPath();
-	ctx.fillStyle = "#25AFDC";
-	ctx.arc(162.5, 137.5, 102.5, Math.PI*0.8, Math.PI*2, true);
-	ctx.fill();
-	ctx.closePath();
-
-	ctx.beginPath();
-	ctx.fillStyle = "#2DA3DC";
-	ctx.arc(162.5, 137.5, 102.5, Math.PI*0.5, Math.PI*3.5, true);
-	ctx.fill();
-	ctx.closePath();
-
-	ctx.beginPath();
-	ctx.fillStyle = "#3498DB";
-	ctx.arc(162.5, 137.5, 102.5, Math.PI*0.2, Math.PI*3.6, true);
-	ctx.fill();
-	ctx.closePath();
-
-
-	ctx.beginPath(); 
-	ctx.fillStyle = "#CCE8F6";
-	ctx.ellipse(165.5, 128.5, 80, 90, 0, Math.PI*2, 0, true);
-	ctx.fill();
-	ctx.closePath();
-
-	ctx.fillStyle = "#383D71";
-	ctx.font = '70px "Nugelo Serif"';
-	ctx.fillText('h', 120, 120);
-	ctx.fillText('w', 170, 180);
-
-/*
-		ctx.beginPath();
-	ctx.fillStyle = "#2585C5";
-	ctx.arc(162.5, 177.5, 112.5, 0, Math.PI*2, true);
-	ctx.fill();
-	ctx.closePath();*/
-
-/*
-	ctx.beginPath();
-	ctx.fillStyle = "#444FAD";
-	ctx.bezierCurveTo(10, 10, 30, 30, 20, 20);
-	ctx.fill();
-	ctx.closePath();*/
 
 	colorPickerDisplay.innerText = colorPicker.value;
 	console.log("Script loaded. (" + performance.now() + "ms)");

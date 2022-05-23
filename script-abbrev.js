@@ -40,6 +40,26 @@ window.addEventListener('load', function() {
 
 
 
+	function inactivePage() {
+		var inactiveLinks = document.getElementsByClassName("inactive");
+		var inactiveWarning = document.getElementById("inactiveWarning");
+		var inactiveTimer;
+
+
+		console.log(inactiveLinks.length)
+		for (let i = 0; i < inactiveLinks.length; i++)
+		{
+			inactiveLinks[i].addEventListener("click", function() {
+				clearTimeout(inactiveTimer);
+				inactiveWarning.style.opacity = 1;
+				inactiveWarning.style.top = 140 + (i * 50) + "px";
+				inactiveWarning.style.left = 140 - (i * 20) + "px";
+				inactiveTimer = setTimeout(function() {
+					inactiveWarning.style.opacity = 0;
+				}, 2000)
+			})
+		}
+	}
 
 
 	function populateHomepageAdvert() {
@@ -159,6 +179,7 @@ window.addEventListener('load', function() {
 	}
 
 	populateHomepageAdvert();
+	inactivePage();
 
 
 
@@ -217,29 +238,10 @@ window.addEventListener('load', function() {
 
 
 	ctx.beginPath(); 
-	ctx.fillStyle = "#CCE8F6";
+	ctx.fillStyle = "#3F4C48";
 	ctx.ellipse(165.5, 128.5, 80, 90, 0, Math.PI*2, 0, true);
 	ctx.fill();
 	ctx.closePath();
-
-	ctx.fillStyle = "#383D71";
-	ctx.font = '70px "Nugelo Serif"';
-	ctx.fillText('h', 120, 120);
-	ctx.fillText('w', 170, 180);
-
-/*
-		ctx.beginPath();
-	ctx.fillStyle = "#2585C5";
-	ctx.arc(162.5, 177.5, 112.5, 0, Math.PI*2, true);
-	ctx.fill();
-	ctx.closePath();*/
-
-/*
-	ctx.beginPath();
-	ctx.fillStyle = "#444FAD";
-	ctx.bezierCurveTo(10, 10, 30, 30, 20, 20);
-	ctx.fill();
-	ctx.closePath();*/
 
 	console.log("Script loaded. (" + performance.now() + "ms)");
 })
