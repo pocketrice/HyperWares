@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Lucas Xie | P4A Web Programming | Project 4 -->
 <html>
-<head>
+<head> <!-- Head: contains metatags, links to scripts. -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="An imaginary marketplace focused on all your HTML quick-fix needs. An aesthetically relaxed yet informative documentation on HTML's finest elements.">
@@ -24,7 +24,7 @@
 </head>
 <body>
 	<img src="rain-park.jpg" class="backdrop">
-<header class="hpOverride">
+<header class="hpOverride"> <!-- Header: contains hamburger menu and title banner -->
 	<div id="banner"></div>
 	<img src="favicon.png" id="templogo">
 	<h1><span id="hpTitleTop">The Hypertext</span><br><span id="hpTitleBottom">Warehouse</span></h1>
@@ -44,14 +44,14 @@
 	<canvas id="logo" width="275" height="275"></canvas>
 </header>
 
-<!-- ADVERT IMAGES like on clippy website; TODO: adaptive order form based on choices; e.g. choose credit card and get credit card options; replace all hrs with divs-->
+<!-- Advert: this is a customized advertisement that changes on each load. It refers to features of the website and my other projects as well. -->
 <div class="advert">
 <img src="StackContainers.webp" height="135" id="advert-img">
 <p id="advert-name">Your favorite elements, now brilliantly packaged.</p>
 <p id="advert-caption">/* Purchase a bundle today and get a discount on your entire purchase. */</p>
 </div>
 
-<div class="basket">
+<div class="basket"> <!-- Basket: contains basic information about the chosen order. No functionality added yet. -->
 <h4 id="basketTitle">Item -- Unit Price<span class="material-symbols-outlined">help</span>-- Quantity</h4>
 <p id="basketInfo">Each unit is a permanent license to your selected element for up to three devices.</p>
 <span class="basketItems">&lt;html&gt; -- $0.99<input type="number" placeholder="1" class="quantityNeedsValidation" min="1" max="5"><span class="material-symbols-outlined">delete</span>
@@ -67,8 +67,8 @@
 </div>
 
 
-
-<form method="post" enctype="text/plain" id="checkoutForm">
+<!-- Form: contains a variety of input fields (some with special validation). Note that I did not figure out why the fields' information was not all being sent when submitting to send the form email -->
+<form method="post" action="mailto:dkahle@uaschools.org" enctype="text/plain" id="checkoutForm">
 <span class="material-symbols-outlined">person</span>&nbsp;&nbsp;Name<br><p class="submitCaption">Input an identifying name (preferably full) for this order.</p><input type="text" pattern="^[A-Za-z ,.'-]+$" placeholder="John Doe" class="inputNeedsValidation"><span class="form-validator form-fail"><span class="material-symbols-outlined">error</span>&nbsp;Must be only alphabetic characters</span><br><br><br>
 
 <span class="material-symbols-outlined">mail</span>&nbsp;&nbsp;Email Address<br><p class="submitCaption">Input a secure, valid email address for additional order information and verification.</p><input type="email" pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$" placeholder="email@address.com" class="inputNeedsValidation"><span class="form-validator form-valid"><span class="material-symbols-outlined">done</span>&nbsp;Valid!</span><br><br><br>
@@ -86,7 +86,7 @@
 <input type="reset">
 <input type="submit" value="Submit order" class="submitButton"></form><br><br><br><br>
 
-
+<!-- Hamburger menu credited to https://alvarotrigo.com/blog/hamburger-menu-css/ -->
 <div id="menu">
   <div id="menu-bar" onclick="menuOnClick()">
     <div id="bar1" class="bar"></div>
@@ -104,11 +104,12 @@
 </div>
 
 <div class="menu-bg" id="menu-bg"></div>
+<!-- End hamburger menu -->
 
 
 
 
-
+<!-- Footer: contains disclaimer -->
 <footer class="hpOverride"><span class="disclaimer">Disclaimer:</span> This is a fictional business created in a Web Programming class for the purpose of learning HTML and CSS. Note that <strong>no products or services are actually for sale</strong>.</footer>
 </body>
 </html>

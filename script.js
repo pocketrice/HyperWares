@@ -25,14 +25,16 @@ window.addEventListener('load', function() {
 	var advertImg = document.getElementById("advert-img");
 	var advertNameCollection = ["There <em>is</em> such thing as a free lunch.", "Cryptography doesn't have to be difficult.", "The history of the internet, now more readable.", "Text doesn't just have to be Arial 16px #000000."];
 	var advertCaptionCollection = ["Get a free element license of your choice when you spend over $50.", "Visit Kryptos for a free comprehensive resource on cryptography.", "Visit the Internet Timeline to learn more about web history.", "Explore the Markdown page for the latest innovations in typography."]
-	var advertImgCollection = ["dumplings.jpg", "kryptos.jpg", "internet-archive.jpg", "printing-press.jpg"]
-	var randomAdvertValue = getRndInteger(0, 3); // Or use advertCaptionCollection.length or something
+	var advertImgCollection = ["dumplings.jpg", "kryptos.jpg", "internet-archive.jpg", "printing-press.jpg", ""]
+	var randomAdvertValue = getRndInteger(0, 4); // Or use advertCaptionCollection.length or something
 	console.log("randomAdvertValue: " + randomAdvertValue);
 
+	if (randomAdvertValue != 4)
+	{
 	advertName.innerHTML = advertNameCollection[randomAdvertValue];
 	advertCaption.innerHTML = "/* " + advertCaptionCollection[randomAdvertValue] + " */";
 	advertImg.setAttribute("src", advertImgCollection[randomAdvertValue]);
-
+}
 	colorPicker.addEventListener("input", function() {
 		colorPickerDisplay.innerText = colorPicker.value;
 	});
@@ -117,19 +119,6 @@ window.addEventListener('load', function() {
 			})
 	}
 
-/*
-	$(" #checkoutForm ").reset(function(e) { // ULTRA WIP
-		if (validationFields.forEach(element => ((element.classList.contains("form-fail")) ? true : false)) == true)
-		{
-			alert("Unable to submit: you have one or more invalid fields.")
-			e.preventDefault();
-		}
-		else
-		{
-			alert("Successfully submitted your order. Thank you for your business!")
-			e.preventDefault();
-		}
-	})*/
 
 	function reset() {
 		colorPickerDisplay.innerText = "------";
