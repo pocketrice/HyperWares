@@ -162,27 +162,6 @@ window.addEventListener('load', function() {
 
 
 
-	Mousetrap.bind('tab', function() { // TODO: hide mouse; when mouse moved/clicked revert 'mouseless mode'.
-		navCount++;
-
-		if (navCount > 3)
-		{
-			navCount = 0;
-		}
-
-		navElement[navCount].style.color = "#E0E5EC";
-
-		for (let i = 0; i < navElement.length; i++)
-		{
-			if (i != navCount)
-			{
-				navElement[i].style.color = "#96A9A7";
-			}
-		}
-	});
-
-	seamless.polyfill();
-
 
 
 	var cnv = document.getElementById("logo");
