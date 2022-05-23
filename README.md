@@ -9,7 +9,7 @@ The grand market for all your HTML quick-fix needs. Stock up on spare elements l
 > For your consideration:
 - Keep an eye on the project checklist -- plenty to do and plenty to plan.
 - Recommended browser: Firefox
-- Focus on a more modern design (unlike previous projects)
+- Focus on "sleek efficiency" and unique but also efficient purpose.
 - Remember past projects' themings? Project 0 was "nice and simple", Project 1 was "early 2000s", etc... and Project 4 will focus on a blend of Kryptos and a touch of clean modernism.
 
 <br><br>
