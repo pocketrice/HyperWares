@@ -21,7 +21,7 @@
 		var taxObj = document.getElementById("taxValue");
 		var totalObj = document.getElementById("totalValue");
 		var unitPrice = ["0.99", "0.99", "1.99"]
-		const TAX_RATE = 0.575;
+		const TAX_RATE = 0.0575;
 
 		var subtotal = 0;
 		var tax = 0;
