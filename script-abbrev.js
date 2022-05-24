@@ -239,7 +239,31 @@ window.addEventListener('load', function() {
 
 	ctx.beginPath(); 
 	ctx.fillStyle = "#3F4C48";
-	ctx.ellipse(165.5, 128.5, 80, 90, 0, Math.PI*2, 0, true);
+	ctx.ellipse(175.5, 128.5, 80, 80, 0, Math.PI*2, 0, true);
+	ctx.fill();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.fillStyle = "#2571b6";
+	ctx.ellipse(175.5, 125, 80, 90, Math.PI*0.9, Math.PI*1.2, 0, true);
+	ctx.fill();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.fillStyle = "#1c63ae";
+	ctx.ellipse(175.5, 125, 80, 90, Math.PI*0.78, Math.PI*0.81, 0, true);
+	ctx.fill();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.fillStyle = "#1c5c9d";
+	ctx.ellipse(175.5, 125, 80, 90, Math.PI*0.63, Math.PI*0.65, 0, true);
+	ctx.fill();
+	ctx.closePath();
+
+		ctx.beginPath();
+	ctx.fillStyle = "#3F4C48";
+	ctx.ellipse(175.5, 140, 74, 60, Math.PI, Math.PI*2, 0, true);
 	ctx.fill();
 	ctx.closePath();
 

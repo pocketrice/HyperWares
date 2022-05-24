@@ -10,7 +10,7 @@
 		<meta name="copyright" content="2022">
 
 	<title>The Hypertext Warehouse</title>
-<style>
+<style> 
 	@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Alegreya+SC:wght@800&family=Nova+Mono&display=swap');
 
 
@@ -213,10 +213,10 @@ html, body {
 #logo {
 	filter: drop-shadow(3px 3px 15px #2E3939);
 	position: absolute;
-	top: 0px;
+	top: 5px;
 	z-index: 10;
-	width: 100px;
-	height: 95px;
+	width: 95px;
+	height: 90px;
 	left: 34.5%;
 }
 
@@ -250,15 +250,6 @@ footer {
 }
 
 
-
-#templogo {
-	position: absolute;
-	width: 70px;
-	image-rendering: pixelated;
-	left: 36.5%;
-	top: 13px;
-	filter: drop-shadow(0.5px 0.5px 3px #364642);
-}
 
 /*
 
@@ -889,9 +880,9 @@ position: absolute;
 #citations .material-symbols-outlined {
 	font-size: 30px;
 	color: #B8A88F;
-	position: absolute;
-	top: -35px;
-	left: 1270px;
+	position: fixed;
+bottom: 10px;
+	right: 10px;
 	transition: color 1.2s;
 	z-index: 200;
 }
@@ -944,7 +935,6 @@ position: absolute;
 	<div id="visitorBannerTooltip" class="tooltip"><p>Lifetime visitor count is <span id="visitors">0</span> visitors.</p></div>
 	<div id="infoBanner"><span class="material-symbols-outlined materialSymOverride">info</span></div>
 		<div id="infoBannerTooltip" class="tooltip"><p>Visit us at <em>123 Main St., Anytown, ST 01010</em> or call us toll-free at <em>555-555-5555</em> for more info about your local HyperWares store.<br><br>This business was founded by <em>Lucas Xie</em> (<strong>xie.3@uaschools.org</strong>)</p></div>
-	<img src="favicon.png" id="templogo">
 	<h1><span id="hpTitleTop">The Hypertext</span><br><span id="hpTitleBottom">Warehouse</span></h1>
 
 <!-- Hamburger menu credited to https://alvarotrigo.com/blog/hamburger-menu-css/ -->
@@ -998,7 +988,7 @@ position: absolute;
 <div id="exploreTimeoutRemainder"></div>
 </div>
 
-<div id="citations">
+<div id="citations"> <!-- Citations: a hoverable panel that contains all citations for this page and a QR code. -->
 <span class="material-symbols-outlined">help</span>
 <div id="citationsPanel">
 Google Fonts. Google, 2022, fonts.google.com. Accessed 3 Apr. 2022.<br><br>
@@ -1034,7 +1024,7 @@ Bgrins. "tinycolor2." npm, GitHub, 2020, www.npmjs.com/package/tinycolor2.
 </div>
 </div>
 
-<!-- Footer: contains disclaimer -->
+<!-- Footer: contains disclaimer; note: name and email is not here, but actually in the 'infoBanner'!-->
 <footer><span class="disclaimer">Disclaimer:</span> This is a fictional business created in a Web Programming class for the purpose of learning HTML and CSS. Note that <strong>no products or services are actually for sale</strong>.</footer>
 </body>
 </html>

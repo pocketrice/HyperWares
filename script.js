@@ -33,7 +33,7 @@
 			subtotal += +parseFloat(document.getElementsByClassName("quantityNeedsValidation")[i].value * unitPrice[i]);
 		}
 
-		subtotal = Math.round(subtotal*100)/100;
+		subtotal = (Math.round(subtotal*100)/100).toFixed(2);
 		tax = (parseFloat(subtotal * TAX_RATE)).toFixed(2);
 		total = (parseFloat(+subtotal + +tax)).toFixed(2);
 
