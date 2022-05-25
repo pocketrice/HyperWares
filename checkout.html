@@ -410,7 +410,7 @@ div.advert {
 }
 
 div.basket {
-	background-image: linear-gradient(to top left, #9ACEC920, #89B4A235);
+	background-image: linear-gradient(to top left, #9ACEC920, #89B4A245);
 	border-radius: 40px;
 	position: relative;
 	float: right;
@@ -990,14 +990,14 @@ div#buffer {
 <div class="basket"> <!-- Basket: contains basic information about the chosen order. No functionality added yet. Big side note: there's no restrictions on what # you can type into quantity -- what I would want is to lock it to integers-only, 1-3. -->
 <h4 id="basketTitle">Item&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unit Price<span class="material-symbols-outlined" id="basketHelp">help</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity</h4>
 <p id="basketInfo">Each unit is a permanent license to your selected element for up to three devices.</p>
-<span class="basketItems">&lt;html&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0.99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="1" class="quantityNeedsValidation" min="1" max="5"><span class="material-symbols-outlined" onclick="resetQuantity(0)">delete</span>
-	<br>&lt;body&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0.99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="1" class="quantityNeedsValidation" min="1" max="5"><span class="material-symbols-outlined" onclick="resetQuantity(1)">delete</span>
-	<br>&lt;div&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1.99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="1" class="quantityNeedsValidation" min="1" max="5"><span class="material-symbols-outlined" onclick="resetQuantity(2)">delete</span></span>
+<span class="basketItems">&lt;html&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0.99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="1" class="quantityNeedsValidation" min="1" max="5" value="1"><span class="material-symbols-outlined" onclick="resetQuantity(0)">delete</span>
+	<br>&lt;body&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0.99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="1" class="quantityNeedsValidation" min="1" max="5" value="1"><span class="material-symbols-outlined" onclick="resetQuantity(1)">delete</span>
+	<br>&lt;div&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1.99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="1" class="quantityNeedsValidation" min="1" max="5" value="1"><span class="material-symbols-outlined" onclick="resetQuantity(2)">delete</span></span>
 	<br><br><hr><br>
 	<!-- Price widget: automatically changes based on changes in item quantity (see above)-->
-	<span id="subtotal">subtotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="subtotalValue">...</span></span><br><div id="buffer"></div> <!-- Ignore the nbsp spam; just a quick n' dirty formatting fix -->
-	<span id="tax">tax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="taxValue">...</span></span><br><br><br>
-	<span id="totaltotal">your total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="totalValue">...</span></span>
+	<span id="subtotal">subtotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="subtotalValue">$3.97</span></span><br><div id="buffer"></div> <!-- Ignore the nbsp spam; just a quick n' dirty formatting fix -->
+	<span id="tax">tax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="taxValue">$0.23</span></span><br><br><br>
+	<span id="totaltotal">your total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="totalValue">$4.20</span></span>
 
 
 </div>
