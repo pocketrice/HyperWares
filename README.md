@@ -1,12 +1,7 @@
 # The Hypertext Warehouse
-![Warehouse](https://user-images.githubusercontent.com/79682953/164791360-bd2cf839-aee0-4255-a41e-ebf721b2812a.jpg)
+<img width="1432" alt="Screenshot 2023-12-04 at 7 06 44 PM" src="https://github.com/PocketRice/HyperWares/assets/79682953/b0724880-a122-404a-8f0c-c8f193cfd6ce">
 
 
 The grand market for all your HTML quick-fix needs. Stock up on spare elements like you would with car parts or conveniently enough, use it as an aesthetically relaxed yet informative documentation on HTML's finest elements.
-<br><br>
-#
 
-> For your consideration:
-- Recommended browser: Firefox
-- Remember past projects' themings? Project 0 was "nice and simple", Project 1 was "early 2000s", etc... and Project 4 will focus on a blend of Kryptos and a touch of clean modernism.
 
