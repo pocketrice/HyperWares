@@ -1004,7 +1004,7 @@ div#buffer {
 
 
 <!-- Form: contains a variety of input fields (some with special validation). Note that I did not figure out why the fields' information was not all being sent when submitting to send the form email -->
-<form method="post" <!--action="mailto:dkahle@uaschools.org"--> enctype="text/plain" id="checkoutForm">
+<form method="post" enctype="text/plain" id="checkoutForm">
 <span class="material-symbols-outlined">person</span>&nbsp;&nbsp;Name<br><p class="submitCaption">Input an identifying name (preferably full) for this order.</p><input type="text" pattern="^[A-Za-z ,.'-]+$" placeholder="John Doe" class="inputNeedsValidation" name="Name"><span class="form-validator form-fail"><span class="material-symbols-outlined">error</span>&nbsp;Must be only alphabetic characters</span><br><br><br>
 
 <span class="material-symbols-outlined">mail</span>&nbsp;&nbsp;Email Address<br><p class="submitCaption">Input a secure, valid email address for additional order information and verification.</p><input type="email" pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$" placeholder="email@address.com" class="inputNeedsValidation" name="Email Address"><span class="form-validator form-valid"><span class="material-symbols-outlined">done</span>&nbsp;Valid!</span><br><br><br>
